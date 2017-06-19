@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.qingmei2.sample_rxpermissions.MainActivity">
+    tools:context="com.qingmei2.sample_rxpermissions.rx01_permissions.RxPermissionsActivity">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -16,10 +16,22 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/btn_permissions"
+            android:id="@+id/btn_01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RxPermissions使用" />
+            android:text="Camera权限直接请求" />
+
+        <Button
+            android:id="@+id/btn_02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Camera权限事件触发请求" />
+
+        <Button
+            android:id="@+id/btn_03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="多权限请求" />
 
     </LinearLayout>
 
