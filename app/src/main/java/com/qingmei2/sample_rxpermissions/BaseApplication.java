@@ -1,4 +1,4 @@
-package com.qingmei2.sample_rxpermissions.rx02_cache.api;
+package com.qingmei2.sample_rxpermissions;
 
 import android.app.Application;
 

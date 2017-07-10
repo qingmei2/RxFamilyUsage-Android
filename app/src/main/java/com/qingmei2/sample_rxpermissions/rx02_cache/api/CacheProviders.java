@@ -1,5 +1,7 @@
 package com.qingmei2.sample_rxpermissions.rx02_cache.api;
 
+import com.qingmei2.sample_rxpermissions.BaseApplication;
+
 import io.rx_cache2.internal.RxCache;
 import io.victoralbertos.jolyglot.GsonSpeaker;
 
