@@ -25,7 +25,7 @@
             android:id="@+id/btn_cmd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="用Java 8 Lambda表达式 命令模式" />
+            android:text="RxCache使用" />
 
     </LinearLayout>
 
