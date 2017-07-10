@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".rx01_permissions.RxPermissionsActivity" />
-        <activity android:name=".rx02_command.CommandActivity"></activity>
+
+        <activity android:name=".rx02_cache.CacheActivity"></activity>
     </application>
 
 </manifest>

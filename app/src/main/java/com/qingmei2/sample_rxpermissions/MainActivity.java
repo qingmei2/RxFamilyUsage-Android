@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.qingmei2.sample_rxpermissions.rx01_permissions.RxPermissionsActivity;
-import com.qingmei2.sample_rxpermissions.rx02_command.CommandActivity;
+import com.qingmei2.sample_rxpermissions.rx02_cache.CacheActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, RxPermissionsActivity.class));
                 break;
             case R.id.btn_cmd:
-                startActivity(new Intent(this, CommandActivity.class));
+                startActivity(new Intent(this, CacheActivity.class));
                 break;
         }
     }
