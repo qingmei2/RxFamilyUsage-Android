@@ -39,7 +39,8 @@ public class CacheActivity extends AppCompatActivity {
                 .getUser(user, new DynamicKey(userName), new EvictDynamicKey(false))
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(user1 -> Log.i(TAG, "requestHttp: user->" + user1.toString()));
+                .subscribe(user1 -> Log.i(TAG, "requestHttp: user->" + user1.toString())
+                        , Throwable::printStackTrace);
 
     }
 }
