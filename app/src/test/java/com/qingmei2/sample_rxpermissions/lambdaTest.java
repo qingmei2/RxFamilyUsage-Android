@@ -1,8 +1,5 @@
 package com.qingmei2.sample_rxpermissions;
 
-import com.qingmei2.sample_rxpermissions.rx02_command.Sample1.FileInvoker;
-import com.qingmei2.sample_rxpermissions.rx02_command.Sample1.MyFileReceiver;
-
 import org.junit.Test;
 
 /**
@@ -14,12 +11,24 @@ public class lambdaTest {
 
     @Test
     public void lambdaTest1() throws Exception {
-        FileInvoker invoker = new FileInvoker();
-        MyFileReceiver myFileReceiver = new MyFileReceiver();
-        invoker.call(myFileReceiver::openFile);
-        invoker.call(myFileReceiver::writeFile);
-        invoker.call(myFileReceiver::closeFile);
-        invoker.setCall("设置的字符串");
-        invoker.call(System.out::print);
+        String str = "123";
+        test(str);
+        str = null;
+        Thread.sleep(5000);
+    }
+
+    private void test(String str) {
+        System.out.println(str);
+        new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                System.out.println(str);
+            }
+        }.run();
     }
 }

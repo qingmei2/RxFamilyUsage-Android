@@ -15,6 +15,7 @@ import com.tbruyelle.rxpermissions2.RxPermissions;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.reactivex.functions.Consumer;
 
 public class RxPermissionsActivity extends AppCompatActivity {
 
@@ -53,7 +54,12 @@ public class RxPermissionsActivity extends AppCompatActivity {
     public void requestPermission() {
         new RxPermissions(this)
                 .request(Manifest.permission.CAMERA)
-                .subscribe(this::dealGranted);
+                .subscribe(this::dealGranted, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        throwable.printStackTrace();
+                    }
+                });
     }
 
     /**

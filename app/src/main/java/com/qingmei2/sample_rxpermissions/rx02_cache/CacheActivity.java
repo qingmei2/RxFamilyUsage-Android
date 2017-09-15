@@ -3,7 +3,7 @@ package com.qingmei2.sample_rxpermissions.rx02_cache;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.widget.Toast;
 
 import com.qingmei2.sample_rxpermissions.R;
 import com.qingmei2.sample_rxpermissions.rx02_cache.api.CacheProviders;
@@ -39,7 +39,7 @@ public class CacheActivity extends AppCompatActivity {
                 .getUser(user, new DynamicKey(userName), new EvictDynamicKey(false))
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(user1 -> Log.i(TAG, "requestHttp: user->" + user1.toString())
+                .subscribe(user1 -> Toast.makeText(this, user1.toString(), Toast.LENGTH_SHORT).show()
                         , Throwable::printStackTrace);
 
     }
