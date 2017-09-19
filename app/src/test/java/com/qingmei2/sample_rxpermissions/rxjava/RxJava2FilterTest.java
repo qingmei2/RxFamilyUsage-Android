@@ -1,4 +1,5 @@
-package com.qingmei2.sample_rxpermissions;
+package com.qingmei2.sample_rxpermissions.rxjava;
+
 
 import org.junit.Test;
 
@@ -41,7 +42,7 @@ public class RxJava2FilterTest {
     @Test
     public void elementAtTest() throws Exception {
         Observable.fromArray(nums)
-                .elementAt(18,-1)
+                .elementAt(18, -1)
                 .test()
                 .assertValueCount(1)
                 .assertValue(-1);
@@ -49,10 +50,50 @@ public class RxJava2FilterTest {
 
     @Test
     public void ofTypeTest() throws Exception {
-        Observable.just(1,2,3,"4",5,"6",new Object())
+        //只取数字
+        Observable.just(1, 2, 3, "4", 5, "6", new Object())
                 .ofType(Integer.class)
                 .test()
                 .assertValueCount(4)
-                .assertValueAt(3,5);
+                .assertValueAt(3, 5);
+    }
+
+    @Test
+    public void firstTest() throws Exception {
+        Observable.just(nums)
+                .flatMap(Observable::fromArray)
+                .first(-1)
+                .test()
+                .assertValueCount(1)
+                .assertValueAt(0, 0);
+    }
+
+    @Test
+    public void singleTest() throws Exception {
+        Observable.just(nums)
+                .flatMap(Observable::fromArray)
+                .take(1)
+                .single(-1)
+                .test()
+                .assertValueCount(1)
+                .assertValueAt(0, 0);
+    }
+
+    @Test
+    public void skipTest() throws Exception {
+        Observable.fromArray(nums)
+                .skip(3)
+                .test()
+                .assertValueCount(6)
+                .assertValueAt(0, 3);
+    }
+
+    @Test
+    public void takeTest() throws Exception {
+        Observable.fromArray(nums)
+                .take(3)
+                .test()
+                .assertValueCount(3)
+                .assertValueAt(0, 0);
     }
 }

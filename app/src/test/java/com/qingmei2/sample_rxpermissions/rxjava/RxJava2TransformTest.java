@@ -1,4 +1,4 @@
-package com.qingmei2.sample_rxpermissions;
+package com.qingmei2.sample_rxpermissions.rxjava;
 
 import org.junit.Before;
 import org.junit.Test;
