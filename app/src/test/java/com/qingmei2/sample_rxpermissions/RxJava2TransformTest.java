@@ -10,10 +10,10 @@ import io.reactivex.Observable;
  * desc:the transfrom opretors in the RxJava.
  */
 
-public class RxJavaTransformTest {
+public class RxJava2TransformTest {
 
-    private final Integer[] nums = new Integer[]{0, 1, 2, 3, 4, 5, 6, 7, 8};
-    private Observable<Integer> ob;
+    protected final Integer[] nums = new Integer[]{0, 1, 2, 3, 4, 5, 6, 7, 8};
+    protected Observable<Integer> ob;
 
     @Before
     public void setUp() throws Exception {
