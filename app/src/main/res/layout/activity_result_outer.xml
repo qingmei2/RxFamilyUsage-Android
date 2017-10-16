@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="该TextView将显示result内容" />
+
+    <Button
+        android:id="@+id/btn_open_normal"
+        android:text="普通方式打开新的界面"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_open_rx"
+        android:text="RxActivityResult打开新的界面"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_open_camera"
+        android:text="RxActivityResult打开相机"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

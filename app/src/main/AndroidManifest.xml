@@ -23,7 +23,9 @@
         </activity>
         <activity android:name=".rx01_permissions.RxPermissionsActivity" />
 
-        <activity android:name=".rx02_cache.CacheActivity"></activity>
+        <activity android:name=".rx02_cache.CacheActivity"/>
+        <activity android:name=".rx03_activity_result.MainResultActivity"/>
+        <activity android:name=".rx03_activity_result.SecondResultActivity"/>
     </application>
 
 </manifest>

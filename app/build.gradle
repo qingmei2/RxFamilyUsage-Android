@@ -73,7 +73,8 @@ dependencies {
         exclude group: 'org.glassfish', module: 'javax.annotation'
     }
     implementation 'com.github.VictorAlbertos.Jolyglot:gson:0.0.3'
-
+    //RxActivityResult
+    implementation 'com.github.VictorAlbertos:RxActivityResult:0.4.5-2.x'
     //butterKnife
     implementation 'com.jakewharton:butterknife:9.0.0-SNAPSHOT'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-SNAPSHOT'

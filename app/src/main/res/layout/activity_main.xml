@@ -22,11 +22,16 @@
             android:text="RxPermissions使用" />
 
         <Button
-            android:id="@+id/btn_cmd"
+            android:id="@+id/btn_cache"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RxCache使用" />
 
+        <Button
+            android:id="@+id/btn_activity_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RxActivityResult使用" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
